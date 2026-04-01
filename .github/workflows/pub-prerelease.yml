@@ -189,7 +189,7 @@ jobs:
               with:
                   toolchain: 1.92.0
 
-            - uses: Swatinem/rust-cache@779680da715d629ac1d338a641029a2f4372abb5 # v3
+            - uses: Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4 # v3
               with:
                   prefix-key: prerelease-${{ needs.prerelease-guard.outputs.release_tag }}
                   cache-targets: true
@@ -249,7 +249,7 @@ jobs:
                   path: artifacts
 
             - name: Create or update GitHub pre-release
-              uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2
+              uses: softprops/action-gh-release@153bb8e04406b158c6c84fc1615b65b24149a1fe # v2
               with:
                   tag_name: ${{ needs.prerelease-guard.outputs.release_tag }}
                   prerelease: true
