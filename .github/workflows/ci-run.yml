@@ -78,7 +78,7 @@ jobs:
             - name: Ensure cargo component
               shell: bash
               run: bash ./scripts/ci/ensure_cargo_component.sh 1.92.0
-            - uses: Swatinem/rust-cache@779680da715d629ac1d338a641029a2f4372abb5 # v3
+            - uses: Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4 # v3
               with:
                   prefix-key: zeroclaw-ci-v1
                   shared-key: ${{ runner.os }}-rust
@@ -131,7 +131,7 @@ jobs:
             - name: Ensure cargo component
               shell: bash
               run: bash ./scripts/ci/ensure_cargo_component.sh 1.92.0
-            - uses: Swatinem/rust-cache@779680da715d629ac1d338a641029a2f4372abb5 # v3
+            - uses: Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4 # v3
               with:
                   prefix-key: zeroclaw-ci-v1
                   shared-key: ${{ runner.os }}-rust
@@ -277,7 +277,7 @@ jobs:
 
             - name: Link check (offline, added links only)
               if: steps.collect_links.outputs.count != '0'
-              uses: lycheeverse/lychee-action@8646ba30535128ac92d33dfc9133794bfdd9b411 # v2
+              uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
               with:
                   fail: true
                   args: >-
